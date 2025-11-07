@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartShop - E-commerce Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🛍️ SmartShop</div>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" class="hidden">Logout</button>
+      <a href="cart.html"><button>Cart (<span id="cartCount">0</span>)</button></a>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="electronics">Electronics</option>
+      <option value="fashion">Fashion</option>
+      <option value="home">Home</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="low">Under ₹1000</option>
+      <option value="medium">₹1000 - ₹3000</option>
+      <option value="high">Above ₹3000</option>
+    </select>
+  </section>
+
+  <main id="productContainer" class="product-grid"></main>
+
+  <section id="cartSection" class="hidden cart">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <p>Total: ₹<span id="totalPrice">0</span></p>
+      <input type="text" id="discountCode" placeholder="Enter Discount Code">
+      <button id="applyDiscount">Apply</button>
+      <p id="discountMsg"></p>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter your name">
+      <button id="loginSubmit">Login</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
